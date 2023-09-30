@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name" translatable="false">Meus Livros</string>
+    <string name="cadastrar_novo">CADASTRAR NOVO</string>
 </resources>
