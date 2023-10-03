@@ -3,9 +3,9 @@ package ufrn.edu.meuslivros
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class salvar : AppCompatActivity() {
+class ListarLivroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_salvar)
+        setContentView(R.layout.activity_listar_livro)
     }
 }
