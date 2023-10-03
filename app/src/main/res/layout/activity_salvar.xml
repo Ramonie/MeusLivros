@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="ufrn.edu.meuslivros.LivroViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,7 +14,7 @@
         android:layout_height="match_parent"
         tools:context=".SalvarActivity">
 
-        <com.google.android.material.tabs.TabLayout
+         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout2"
             android:layout_width="447dp"
             android:layout_height="79dp"
@@ -36,7 +38,8 @@
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="Titulo do livro"
+            android:hint="Titulo do livro"
+            android:text="@={viewModel.livro.titulo}"
             app:layout_constraintBottom_toTopOf="@+id/editTextAutor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +84,8 @@
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:text="Nome do autor(a)"
+            android:hint="Nome do autor(a)"
+            android:text="@={viewModel.livro.autor}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/idAutor"
             app:layout_constraintTop_toBottomOf="@+id/editTextTitulo"
@@ -122,8 +126,9 @@
             android:layout_marginTop="68dp"
             android:layout_marginEnd="80dp"
             android:ems="10"
-            android:inputType="text"
-            android:text="Ano"
+            android:inputType="numberDecimal"
+            android:hint="Ano"
+            android:text="@={ `` + viewModel.livro.ano}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/idAno"
             app:layout_constraintTop_toBottomOf="@+id/editTextAutor"
@@ -151,7 +156,8 @@
             android:layout_marginBottom="184dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextano" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextano"
+            android:rating="@={viewModel.livro.nota}"/>
 
         <Button
             android:id="@+id/btnSalvar"

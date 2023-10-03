@@ -9,9 +9,9 @@ import ufrn.edu.meuslivros.model.Livro
 interface LivroDao {
 
     @Insert
-    fun insert(livro: Livro) : Livro
+     fun insert(livro: Livro)
 
     @Query("SELECT * FROM Livro")
-    fun getAll() : List<Livro>
+     fun getAll(): List<Livro>
 
 }

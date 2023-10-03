@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Livro(
     var titulo:String,
     var autor:String,
-    var nota:Double,
+    var nota: Float,
     var ano:Int
 ){
     @PrimaryKey(autoGenerate = true)
